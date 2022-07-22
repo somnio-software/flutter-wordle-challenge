@@ -1,7 +1,6 @@
----
+
 # Flutter Wordle 💙
 ##### Flutter Wordle Challenge for Flutter Vikings 2022 💙
----
 
 
 
