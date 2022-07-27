@@ -62,15 +62,18 @@ class _KeyboardButton extends StatelessWidget {
   }) =>
       _KeyboardButton(
         width: 56,
+        height: 48,
         letter: 'DEL',
         onTap: onTap,
         backgroundColor: Colors.grey,
       );
+
   factory _KeyboardButton.enter({
     required VoidCallback onTap,
   }) =>
       _KeyboardButton(
         width: 56,
+        height: 48,
         letter: 'ENTER',
         onTap: onTap,
         backgroundColor: Colors.grey,
@@ -81,6 +84,7 @@ class _KeyboardButton extends StatelessWidget {
   final VoidCallback onTap;
   final String letter;
   final Color backgroundColor;
+
   @override
   Widget build(BuildContext context) {
     return Padding(

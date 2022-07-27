@@ -72,7 +72,7 @@ class HomeView extends StatelessWidget {
               ),
               child: Keyboard(
                 onKeyTapped: (key) {
-                  print(key);
+                  //print(key);
                 },
                 onDeleteTapped: () {},
                 onEnterTapped: () {},

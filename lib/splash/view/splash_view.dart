@@ -4,17 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:wordle/home/view/view.dart';
 import 'package:wordle_ui/wordle_ui.dart';
 
-class SplashScreenView extends StatefulWidget {
-  const SplashScreenView({Key? key}) : super(key: key);
+class SplashView extends StatefulWidget {
+  const SplashView({Key? key}) : super(key: key);
 
   @override
-  State<SplashScreenView> createState() => _SplashScreenViewState();
+  State<SplashView> createState() => _SplashViewState();
 }
 
-class _SplashScreenViewState extends State<SplashScreenView>
-    with TickerProviderStateMixin {
+class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
   AnimationController? logoController;
   Animation? logoAnimation;
+
   @override
   void initState() {
     super.initState();
