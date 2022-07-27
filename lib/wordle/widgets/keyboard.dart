@@ -13,9 +13,11 @@ class Keyboard extends StatelessWidget {
     required this.onDeleteTapped,
     required this.onEnterTapped,
   }) : super(key: key);
+
   final void Function(String) onKeyTapped;
   final void Function() onDeleteTapped;
   final void Function() onEnterTapped;
+
   @override
   Widget build(BuildContext context) {
     return Column(

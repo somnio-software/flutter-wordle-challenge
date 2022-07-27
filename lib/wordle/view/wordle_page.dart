@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:wordle/home/home.dart';
+import 'package:wordle/wordle/wordle.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class WordlePage extends StatelessWidget {
+  const WordlePage({Key? key}) : super(key: key);
 
   static Route<void> route(BuildContext context) {
     return MaterialPageRoute(
       builder: (ctx) {
-        return const HomePage();
+        return const WordlePage();
       },
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    return const HomeView();
+    return const WordleView();
   }
 }

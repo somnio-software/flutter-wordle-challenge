@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:wordle/home/widgets/keyboard.dart';
+import 'package:wordle/wordle/widgets/keyboard.dart';
 import 'package:wordle_ui/wordle_ui.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({Key? key}) : super(key: key);
+class WordleView extends StatelessWidget {
+  const WordleView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Flutter Wordle",
+          style: TextStyle(
+            color: WordleColors.logoShade3,
+            fontSize: 24,
+          ),
+        ),
+        backgroundColor: Colors.white,
+      ),
       body: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
