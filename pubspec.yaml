@@ -8,11 +8,8 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.2
-  equatable: ^2.0.3
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.0.1
-  virtual_keyboard_multi_language: ^1.0.3
   wordle_ui:
     path: packages/wordle_ui
 

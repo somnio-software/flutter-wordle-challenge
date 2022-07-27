@@ -1,7 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wordle/home/view/view.dart';
-import 'package:wordle/splash_screen/splash_screen.dart';
 import 'package:wordle_ui/wordle_ui.dart';
 
 class SplashScreenView extends StatefulWidget {
@@ -34,12 +34,10 @@ class _SplashScreenViewState extends State<SplashScreenView>
       parent: logoController!,
       curve: Curves.bounceInOut,
     );
-    context.read<SplashScreenBloc>().add(
-          SplashScreenStartedEvent(
-            onCompleted: () =>
-                Navigator.of(context).pushReplacement(HomePage.route(context)),
-          ),
-        );
+    Timer(
+      const Duration(seconds: 3),
+      () => Navigator.of(context).pushReplacement(HomePage.route(context)),
+    );
   }
 
   @override

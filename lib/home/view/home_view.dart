@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:virtual_keyboard_multi_language/virtual_keyboard_multi_language.dart';
+import 'package:wordle/home/widgets/keyboard.dart';
 import 'package:wordle_ui/wordle_ui.dart';
 
 class HomeView extends StatelessWidget {
@@ -13,7 +13,12 @@ class HomeView extends StatelessWidget {
         children: [
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(40.0),
+              padding: const EdgeInsets.only(
+                top: 40.0,
+                bottom: 10.0,
+                left: 20.0,
+                right: 20.0,
+              ),
               child: GridView.count(
                 crossAxisCount: 5,
                 crossAxisSpacing: 10,
@@ -61,15 +66,16 @@ class HomeView extends StatelessWidget {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: VirtualKeyboard(
-                height: 250,
-                textColor: Colors.white,
-                fontSize: 20,
-                type: VirtualKeyboardType.Alphanumeric,
-                onKeyPress: (VirtualKeyboardKey key) {
-                  print(key.text);
+              padding: const EdgeInsets.only(
+                top: 30.0,
+                bottom: 30.0,
+              ),
+              child: Keyboard(
+                onKeyTapped: (key) {
+                  print(key);
                 },
+                onDeleteTapped: () {},
+                onEnterTapped: () {},
               ),
             ),
           )

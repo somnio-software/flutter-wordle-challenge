@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wordle/splash_screen/splash_screen.dart';
 
 class SplashScreenPage extends StatelessWidget {
@@ -15,9 +14,6 @@ class SplashScreenPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => SplashScreenBloc(),
-      child: const SplashScreenView(),
-    );
+    return const SplashScreenView();
   }
 }
