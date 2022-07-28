@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:wordle/l10n/app_localizations.dart';
 import 'package:wordle/wordle/view/view.dart';
 import 'package:wordle_ui/wordle_ui.dart';
 
@@ -44,6 +45,7 @@ class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       body: Center(
         child: Image.asset(
@@ -57,9 +59,9 @@ class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                'Powered by',
-                style: TextStyle(
+              Text(
+                l10n.poweredBy,
+                style: const TextStyle(
                   fontSize: 20,
                   color: Colors.black87,
                 ),

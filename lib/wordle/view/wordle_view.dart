@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wordle/wordle/widgets/keyboard.dart';
+import 'package:wordle/l10n/app_localizations.dart';
+import 'package:wordle/wordle/widgets/widgets.dart';
 import 'package:wordle_ui/wordle_ui.dart';
 
 class WordleView extends StatelessWidget {
@@ -7,11 +8,12 @@ class WordleView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Flutter Wordle",
-          style: TextStyle(
+        title: Text(
+          l10n.flutterWordle,
+          style: const TextStyle(
             color: WordleColors.logoShade3,
             fontSize: 24,
           ),
@@ -20,40 +22,26 @@ class WordleView extends StatelessWidget {
       ),
       body: Column(
         mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(
-                top: 40.0,
-                bottom: 10.0,
-                left: 20.0,
-                right: 20.0,
-              ),
-              child: GridView.count(
-                crossAxisCount: 5,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
-                children: [
-                  for (int i = 0; i < 30; i++)
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.grey,
-                          width: 2,
-                        ),
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(5),
-                        ),
-                      ),
-                      child: Text(
-                        '$i',
-                        style: const TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                ],
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  top: 40.0,
+                  bottom: 10.0,
+                  left: 20.0,
+                  right: 20.0,
+                ),
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.height / 2,
+                  child: const WordleGrid(
+                    crossAxisCount: 5,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    numberOfBoxes: 30,
+                  ),
+                ),
               ),
             ),
           ),
