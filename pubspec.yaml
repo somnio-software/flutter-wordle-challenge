@@ -17,6 +17,7 @@ dependencies:
     path: packages/wordle_ui
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.9.3
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
@@ -24,3 +25,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "packages/wordle_ui/assets/s_logo.png"
