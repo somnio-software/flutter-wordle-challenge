@@ -65,9 +65,9 @@ class _SplashViewState extends State<SplashView> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                l10n.sponsoredBy,
+                l10n.poweredBy.toUpperCase(),
                 style: const TextStyle(
-                  fontSize: 11,
+                  fontSize: 14,
                   color: Colors.black87,
                 ),
               ),
@@ -76,7 +76,7 @@ class _SplashViewState extends State<SplashView> {
               ),
               Image.asset(
                 WordleAssets.somnioLogoPath,
-                height: 47,
+                height: 64,
               ),
               const SizedBox(
                 height: 20,

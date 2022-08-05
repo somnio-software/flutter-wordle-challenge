@@ -22,24 +22,34 @@ class WordleGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: crossAxisCount,
-      crossAxisSpacing: crossAxisSpacing,
-      mainAxisSpacing: mainAxisSpacing,
-      children: [
-        for (int i = 0; i < numberOfBoxes; i++)
-          Container(
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: boxBorderColor,
-                width: boxBorderWidth,
+    return SizedBox(
+      height: 6 * 75,
+      width: MediaQuery.of(context).size.height / 2,
+      child: GridView.count(
+        crossAxisCount: crossAxisCount,
+        crossAxisSpacing: crossAxisSpacing,
+        mainAxisSpacing: mainAxisSpacing,
+        physics: const NeverScrollableScrollPhysics(),
+        children: [
+          for (int i = 0; i < numberOfBoxes; i++)
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: boxBorderColor,
+                  width: boxBorderWidth,
+                ),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(boxBorderRadius),
+                ),
               ),
-              borderRadius: BorderRadius.all(
-                Radius.circular(boxBorderRadius),
+              child: const Center(
+                child: Text(
+                  "",
+                ),
               ),
             ),
-          ),
-      ],
+        ],
+      ),
     );
   }
 }

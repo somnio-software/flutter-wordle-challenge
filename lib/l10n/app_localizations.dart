@@ -98,11 +98,11 @@ abstract class AppLocalizations {
   /// **'Flutter Wordle'**
   String get flutterWordle;
 
-  /// No description provided for @sponsoredBy.
+  /// No description provided for @poweredBy.
   ///
   /// In en, this message translates to:
-  /// **'SPONSORED BY'**
-  String get sponsoredBy;
+  /// **'Powered by'**
+  String get poweredBy;
 
   /// No description provided for @flutter.
   ///

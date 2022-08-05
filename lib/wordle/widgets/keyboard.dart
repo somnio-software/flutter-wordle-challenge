@@ -50,8 +50,8 @@ class Keyboard extends StatelessWidget {
 class _KeyboardButton extends StatelessWidget {
   const _KeyboardButton({
     Key? key,
-    this.height = 48,
-    this.width = 30,
+    this.height = 56,
+    this.width = 36,
     required this.onTap,
     required this.letter,
     required this.backgroundColor,
@@ -62,7 +62,7 @@ class _KeyboardButton extends StatelessWidget {
   }) =>
       _KeyboardButton(
         width: 56,
-        height: 48,
+        height: 56,
         letter: 'DEL',
         onTap: onTap,
         backgroundColor: Colors.grey,
@@ -73,7 +73,7 @@ class _KeyboardButton extends StatelessWidget {
   }) =>
       _KeyboardButton(
         width: 56,
-        height: 48,
+        height: 56,
         letter: 'ENTER',
         onTap: onTap,
         backgroundColor: Colors.grey,

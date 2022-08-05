@@ -11,7 +11,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get flutterWordle => 'Flutter Wordle';
 
   @override
-  String get sponsoredBy => 'SPONSORED BY';
+  String get poweredBy => 'Powered by';
 
   @override
   String get flutter => 'Flutter';

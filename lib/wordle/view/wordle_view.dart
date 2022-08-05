@@ -8,70 +8,75 @@ class WordleView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        centerTitle: true,
-        toolbarHeight: 100,
-        title: Column(
-          children: [
-            Image.asset(
-              WordleAssets.sLogoPath,
-              height: 34,
-            ),
-            Text(
-              l10n.flutterWordle.toUpperCase(),
-              style: const TextStyle(
-                color: WordleColors.logoShade3,
-                fontSize: 16,
-              ),
-            ),
+      body: SafeArea(
+        child: ListView(
+          children: const [
+            _WordleTitle(),
+            _WordleGrid(),
+            WordleKeyboard(),
           ],
         ),
-        backgroundColor: Colors.white,
-        elevation: 0,
       ),
-      body: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Expanded(
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.only(
-                  top: 80.0,
-                  bottom: 10.0,
-                  left: 48.0,
-                  right: 48.0,
-                ),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.height / 2,
-                  child: const WordleGrid(
-                    crossAxisCount: 5,
-                    crossAxisSpacing: 7,
-                    mainAxisSpacing: 7,
-                    numberOfBoxes: 25,
-                  ),
-                ),
-              ),
-            ),
+    );
+  }
+}
+
+class _WordleTitle extends StatelessWidget {
+  const _WordleTitle({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
+    return Column(
+      children: [
+        const SizedBox(height: 20),
+        Image.asset(
+          WordleAssets.sLogoPath,
+          height: 45,
+        ),
+        Text(
+          l10n.flutterWordle.toUpperCase(),
+          style: const TextStyle(
+            color: WordleColors.logoShade3,
+            fontSize: 20,
           ),
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 30.0,
-              bottom: 30.0,
-            ),
-            child: Keyboard(
-              onKeyTapped: (key) {
-                //print(key);
-              },
-              onDeleteTapped: () {},
-              onEnterTapped: () {},
-            ),
-          )
-        ],
+        ),
+      ],
+    );
+  }
+}
+
+class _WordleGrid extends StatelessWidget {
+  const _WordleGrid({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+      padding: EdgeInsets.all(40.0),
+      child: WordleGrid(
+        crossAxisCount: 5,
+        crossAxisSpacing: 7,
+        mainAxisSpacing: 7,
+        numberOfBoxes: 30,
       ),
+    );
+  }
+}
+
+class WordleKeyboard extends StatelessWidget {
+  const WordleKeyboard({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Keyboard(
+      onKeyTapped: (key) {
+        //print(key);
+      },
+      onDeleteTapped: () {},
+      onEnterTapped: () {},
     );
   }
 }
