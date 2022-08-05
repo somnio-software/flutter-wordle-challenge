@@ -12,9 +12,14 @@ import 'package:flutter/widgets.dart';
 class Assets {
   Assets._();
 
+  static const AssetGenImage delete = AssetGenImage('assets/delete.png');
+  static const AssetGenImage enter = AssetGenImage('assets/enter.png');
+  static const AssetGenImage flutterText =
+      AssetGenImage('assets/flutter_text.png');
   static const AssetGenImage sLogo = AssetGenImage('assets/s_logo.png');
   static const AssetGenImage somnioLogo =
       AssetGenImage('assets/somnio_logo.png');
+  static const AssetGenImage vikings = AssetGenImage('assets/vikings.png');
 }
 
 class AssetGenImage {

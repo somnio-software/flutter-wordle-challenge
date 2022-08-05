@@ -98,11 +98,23 @@ abstract class AppLocalizations {
   /// **'Flutter Wordle'**
   String get flutterWordle;
 
-  /// No description provided for @poweredBy.
+  /// No description provided for @sponsoredBy.
   ///
   /// In en, this message translates to:
-  /// **'Powered by'**
-  String get poweredBy;
+  /// **'SPONSORED BY'**
+  String get sponsoredBy;
+
+  /// No description provided for @flutter.
+  ///
+  /// In en, this message translates to:
+  /// **'Flutter'**
+  String get flutter;
+
+  /// No description provided for @wordle.
+  ///
+  /// In en, this message translates to:
+  /// **'Wordle'**
+  String get wordle;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

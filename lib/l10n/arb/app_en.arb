@@ -1,4 +1,6 @@
 {
   "flutterWordle":"Flutter Wordle",
-  "poweredBy":"Powered by"
+  "sponsoredBy":"SPONSORED BY",
+  "flutter":"Flutter",
+  "wordle":"Wordle"
 }
