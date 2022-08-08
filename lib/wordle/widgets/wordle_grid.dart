@@ -9,7 +9,6 @@ class WordleGrid extends StatelessWidget {
     required this.numberOfBoxes,
     this.boxBorderColor = Colors.grey,
     this.boxBorderWidth = 2.0,
-    this.boxBorderRadius = 5.0,
   }) : super(key: key);
 
   final int crossAxisCount;
@@ -18,37 +17,39 @@ class WordleGrid extends StatelessWidget {
   final int numberOfBoxes;
   final Color boxBorderColor;
   final double boxBorderWidth;
-  final double boxBorderRadius;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 6 * 75,
-      width: MediaQuery.of(context).size.height / 2,
-      child: GridView.count(
-        crossAxisCount: crossAxisCount,
-        crossAxisSpacing: crossAxisSpacing,
-        mainAxisSpacing: mainAxisSpacing,
-        physics: const NeverScrollableScrollPhysics(),
-        children: [
-          for (int i = 0; i < numberOfBoxes; i++)
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: boxBorderColor,
-                  width: boxBorderWidth,
+    return Expanded(
+      flex: 7,
+      child: Container(
+        height: 430,
+        constraints: const BoxConstraints(maxWidth: 430),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(40, 20, 40, 10),
+          child: GridView.count(
+            crossAxisCount: crossAxisCount,
+            crossAxisSpacing: crossAxisSpacing,
+            mainAxisSpacing: mainAxisSpacing,
+            physics: const NeverScrollableScrollPhysics(),
+            children: [
+              for (int i = 0; i < numberOfBoxes; i++)
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: boxBorderColor,
+                      width: boxBorderWidth,
+                    ),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "",
+                    ),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(boxBorderRadius),
-                ),
-              ),
-              child: const Center(
-                child: Text(
-                  "",
-                ),
-              ),
-            ),
-        ],
+            ],
+          ),
+        ),
       ),
     );
   }

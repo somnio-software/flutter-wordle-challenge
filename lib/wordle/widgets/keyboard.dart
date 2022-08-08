@@ -21,28 +21,41 @@ class Keyboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: _qwerty
-          .map(
-            (keyRow) => Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: keyRow.map(
-                (letter) {
-                  if (letter == 'DEL') {
-                    return _KeyboardButton.delete(onTap: onDeleteTapped);
-                  } else if (letter == 'ENTER') {
-                    return _KeyboardButton.enter(onTap: onEnterTapped);
-                  }
-                  return _KeyboardButton(
-                    letter: letter,
-                    onTap: () => onKeyTapped(letter),
-                    backgroundColor: Colors.grey,
-                  );
-                },
-              ).toList(),
-            ),
-          )
-          .toList(),
+    return Expanded(
+      flex: 3,
+      child: Column(
+        children: _qwerty
+            .map(
+              (keyRow) => Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: keyRow.map(
+                  (letter) {
+                    if (letter == 'DEL') {
+                      return _KeyboardButton(
+                        letter: letter,
+                        onTap: () => onDeleteTapped,
+                        backgroundColor: Colors.grey,
+                        isSpecialKey: true,
+                      );
+                    } else if (letter == 'ENTER') {
+                      return _KeyboardButton(
+                        letter: letter,
+                        onTap: () => onEnterTapped,
+                        backgroundColor: Colors.grey,
+                        isSpecialKey: true,
+                      );
+                    }
+                    return _KeyboardButton(
+                      letter: letter,
+                      onTap: () => onKeyTapped(letter),
+                      backgroundColor: Colors.grey,
+                    );
+                  },
+                ).toList(),
+              ),
+            )
+            .toList(),
+      ),
     );
   }
 }
@@ -50,50 +63,30 @@ class Keyboard extends StatelessWidget {
 class _KeyboardButton extends StatelessWidget {
   const _KeyboardButton({
     Key? key,
-    this.height = 56,
-    this.width = 36,
     required this.onTap,
     required this.letter,
     required this.backgroundColor,
+    this.isSpecialKey = false,
   }) : super(key: key);
 
-  factory _KeyboardButton.delete({
-    required VoidCallback onTap,
-  }) =>
-      _KeyboardButton(
-        width: 56,
-        height: 56,
-        letter: 'DEL',
-        onTap: onTap,
-        backgroundColor: Colors.grey,
-      );
-
-  factory _KeyboardButton.enter({
-    required VoidCallback onTap,
-  }) =>
-      _KeyboardButton(
-        width: 56,
-        height: 56,
-        letter: 'ENTER',
-        onTap: onTap,
-        backgroundColor: Colors.grey,
-      );
-
-  final double height;
-  final double width;
   final VoidCallback onTap;
   final String letter;
   final Color backgroundColor;
+  final bool isSpecialKey;
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final letterWidth = ((width / 10) - 5) * (isSpecialKey ? 2 : 1);
+
     return Padding(
-      padding: const EdgeInsets.all(3.0),
+      padding: const EdgeInsets.all(2.0),
       child: InkWell(
         onTap: onTap,
         child: Container(
-          height: height,
-          width: width,
+          height: 50,
+          width: letterWidth,
+          constraints: const BoxConstraints(maxWidth: 50),
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(
               Radius.circular(5),
@@ -105,13 +98,13 @@ class _KeyboardButton extends StatelessWidget {
                 ? Image.asset(
                     WordleAssets.enterKeyPath,
                     color: Colors.white,
-                    height: 13,
+                    height: 16,
                   )
                 : letter == 'DEL'
                     ? Image.asset(
                         WordleAssets.deleteKeyPath,
                         color: Colors.white,
-                        height: 13,
+                        height: 16,
                       )
                     : Text(
                         letter,

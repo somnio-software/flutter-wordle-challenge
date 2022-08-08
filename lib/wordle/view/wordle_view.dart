@@ -11,11 +11,11 @@ class WordleView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: ListView(
+        child: Column(
           children: const [
             _WordleTitle(),
             _WordleGrid(),
-            WordleKeyboard(),
+            _WordleKeyboard(),
           ],
         ),
       ),
@@ -54,20 +54,17 @@ class _WordleGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(40.0),
-      child: WordleGrid(
-        crossAxisCount: 5,
-        crossAxisSpacing: 7,
-        mainAxisSpacing: 7,
-        numberOfBoxes: 30,
-      ),
+    return const WordleGrid(
+      crossAxisCount: 5,
+      crossAxisSpacing: 2,
+      mainAxisSpacing: 2,
+      numberOfBoxes: 30,
     );
   }
 }
 
-class WordleKeyboard extends StatelessWidget {
-  const WordleKeyboard({Key? key}) : super(key: key);
+class _WordleKeyboard extends StatelessWidget {
+  const _WordleKeyboard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
