@@ -55,10 +55,9 @@ class _WordleGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const WordleGrid(
-      crossAxisCount: 5,
+      wordLength: 5,
       crossAxisSpacing: 2,
       mainAxisSpacing: 2,
-      numberOfBoxes: 30,
     );
   }
 }

@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 class WordleGrid extends StatelessWidget {
   const WordleGrid({
     Key? key,
-    required this.crossAxisCount,
+    required this.wordLength,
     required this.crossAxisSpacing,
     required this.mainAxisSpacing,
-    required this.numberOfBoxes,
     this.boxBorderColor = Colors.grey,
     this.boxBorderWidth = 2.0,
   }) : super(key: key);
 
-  final int crossAxisCount;
+  final int wordLength;
   final double crossAxisSpacing;
   final double mainAxisSpacing;
-  final int numberOfBoxes;
   final Color boxBorderColor;
   final double boxBorderWidth;
+
+  static const int maxAttempts = 6;
 
   @override
   Widget build(BuildContext context) {
@@ -28,12 +28,12 @@ class WordleGrid extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.fromLTRB(40, 20, 40, 10),
           child: GridView.count(
-            crossAxisCount: crossAxisCount,
+            crossAxisCount: wordLength,
             crossAxisSpacing: crossAxisSpacing,
             mainAxisSpacing: mainAxisSpacing,
             physics: const NeverScrollableScrollPhysics(),
             children: [
-              for (int i = 0; i < numberOfBoxes; i++)
+              for (int i = 0; i < wordLength * maxAttempts; i++)
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(
