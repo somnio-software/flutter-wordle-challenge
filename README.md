@@ -36,7 +36,7 @@ We will judge your submission based on the following criteria:
 ## Submission Guidelines:
 
 - Submit the GitHub Link in (this form)
-- Dates of submission: 8/29/22 till 9/12/22
+- Dates of submission: from 8/29/22 till 9/12/22
 - The project should not be created before the timeframe.
 - It should also include an output video
 - If you have run on the web, add the link to the website after deploying.
