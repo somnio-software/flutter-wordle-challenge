@@ -4,7 +4,8 @@
 [![Somnio Software](doc/assets/banner.png)][somnio_software_link]
 
 
-## Flutter Wordle Challenge for Flutter Vikings 2022 💙  powered by [Somnio Software][somnio_software_link]
+## Flutter Wordle Challenge 💙 Powered by [Somnio Software][somnio_software_link]
+### Flutter Vikings Conference 2022 
 
 [![License: MIT][license_badge]][license_link]
 
