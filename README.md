@@ -26,7 +26,7 @@ Can’t wait to see what you create!
 ## Ingredients 🍳 
 
 -   Start with this template
--   Use at least 110 words in the Wordle.
+-   Use only Flutter related words - the more the better!
 -   Have fun with your creativity!
 
 ## Judging Criteria 🌟
