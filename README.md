@@ -23,27 +23,24 @@ Can’t wait to see what you create!
 
 ## Ingredients 🍳 
 
--   You have to start with our (Wordle Template)
--   You have to use at least 110 words in the Wordle.
--   Feel free to show your creativity.
+-   Start with our (Wordle Template)
+-   Use at least 110 words in the Wordle.
+-   Have fun with your creativity!
 
 ## Judging Criteria 🌟
 
-We will judge your submission based on the following criteria:
-
 -   Creativity
 -   Code Quality (Just think that you are going to make this production LIVE)
--   Words used in Wordle
--   Added extra features such as animation
+-   Words related to Flutter used in Wordle
+-   Extra features such as animations 
 -   Scaling properly based on screen sizes (Ran on multiplatform would be a plus point)
 
 ## Submission Guidelines ✅ 
 
-- Submit the GitHub Link in (this form)
+- When you have finished, submit the GitHub Link in (this form)
 - Dates of submission: from 8/29/22 till 9/12/22
-- The project should not be created before the timeframe.
 - It should also include an output video
-- If you have run on the web, add the link to the website after deploying.
+- If you have run it on the web, add the link to the website after deploying.
 
 
 ## Prize 🏆
