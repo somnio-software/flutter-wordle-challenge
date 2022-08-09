@@ -8,11 +8,18 @@
 
 ## Description:
 
-Well, we all have played Wordle where we had to match new keywords every day! How about building one using Flutter? Let's create a Wordle game using Flutter. However, there is a twist, how about you make the Wordle that contains the words related to Flutter only? For example, Container, GestureDetector, Bloc, etc. It would be amusing to create such a game that involves your love, Flutter 💙. However, in this Wordle, people can play any number of times a day! Enjoy as much as you want! Also, who doesn't love our cute little Dash? Solving each Wordle would also give players reward points in terms of Dash!
+We've all played Wordle, where we had to match new words every day! What about building one using Flutter? 
+
+Let's create a Wordle with Flutter that only contains words related to Flutter! For example, Container, GestureDetector, Bloc, etc. It will be fun to create a game that involves our love for Flutter 💙. 
+
+This Wordle, however, lets anyone play it as many times as they want! You’ll be able to play as much as you want! And, who doesn’t love our cute little Dash? Wouldn't it be great if players could earn Dash points with every Wordle they solved?
+
+Can’t wait to see what you create!
+
 
 ## Instructions:
 
--   You have to start with our Wordle Template (GitHub Link).
+-   You have to start with our (Wordle Template)
 -   You have to use at least 110 words in the Wordle.
 -   Feel free to show your creativity.
 
@@ -28,8 +35,12 @@ We will judge your submission based on the following criteria:
 
 ## Submission Guidelines:
 
--   Submit us the GitHub Link
--   It should also include an output video
--   If you have run on the web, add the link to the website after deploying.
+- Submit the GitHub Link in (this form)
+- Dates of submission: 8/29/22 till 9/12/22
+- The project should not be created before the timeframe.
+- It should also include an output video
+- If you have run on the web, add the link to the website after deploying.
+
 
 ## Prize:
+Codemagic Annual Professional Plan! 
