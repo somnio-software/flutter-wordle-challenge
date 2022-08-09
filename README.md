@@ -25,7 +25,7 @@ Can’t wait to see what you create!
 
 ## Ingredients 🍳 
 
--   Start with our template
+-   Start with this template
 -   Use at least 110 words in the Wordle.
 -   Have fun with your creativity!
 
