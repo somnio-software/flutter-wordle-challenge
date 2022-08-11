@@ -4,7 +4,8 @@
 [![Somnio Software](doc/assets/banner.png)][somnio_software_link]
 
 
-##### Flutter Wordle Challenge for Flutter Vikings 2022 💙  powered by [Somnio Software][somnio_software_link]
+## Flutter Wordle Challenge 💙 Powered by [Somnio Software][somnio_software_link]
+### Flutter Vikings Conference 2022 
 
 [![License: MIT][license_badge]][license_link]
 
@@ -25,8 +26,8 @@ Can’t wait to see what you create!
 
 ## Ingredients 🍳 
 
--   Start with our template
--   Use at least 110 words in the Wordle.
+-   Start with this template
+-   Use only Flutter related words - the more the better!
 -   Have fun with your creativity!
 
 ## Judging Criteria 🌟
