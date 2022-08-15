@@ -1,0 +1,10 @@
+include: package:flutter_lints/flutter.yaml
+analyzer:
+  exclude:
+    - lib/l10n/*
+linter:
+  rules: 
+    require_trailing_commas: true
+    sort_constructors_first: true
+    avoid_renaming_method_parameters: true
+    public_member_api_docs: false
